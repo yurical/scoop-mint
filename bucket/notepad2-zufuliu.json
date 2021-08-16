@@ -1,0 +1,52 @@
+{
+    "version": "4.21.07r3826",
+    "description": "A modified version (fork) of Notepad2-mod.",
+    "homepage": "https://github.com/zufuliu/notepad2",
+    "license": {
+        "identifier": "BSD 3-Clause",
+        "url": "https://raw.githubusercontent.com/zufuliu/notepad2/master/License.txt"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/zufuliu/notepad2/releases/download/v4.21.07r3826/Notepad2_i18n_x64_v4.21.07r3826.zip",
+            "hash": "ac27ecd54701816f91b9874ad74bb23b1507384ebf1526a51f180f8003a09aa6"
+        },
+        "32bit": {
+            "url": "https://github.com/zufuliu/notepad2/releases/download/v4.21.07r3826/Notepad2_i18n_Win32_v4.21.07r3826.zip",
+            "hash": "6263bad47c506eb852c5b4d59acc829043eac55dcfeda97883bae64013ca3748"
+        }
+    },
+    "bin": [
+        "metapath.exe",
+        "Notepad2.exe"
+    ],
+    "shortcuts": [
+        [
+            "Notepad2.exe",
+            "Notepad2"
+        ],
+        [
+            "metapath.exe",
+            "metapath"
+        ]
+    ],
+    "persist": [
+        "metapath.ini",
+        "Notepad2 DarkTheme.ini",
+        "Notepad2.ini"
+    ],
+    "checkver": {
+        "url": "https://github.com/zufuliu/notepad2/releases/latest",
+        "regex": "/releases/tag/v([\\w.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/zufuliu/notepad2/releases/download/v$version/Notepad2_i18n_x64_v$version.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/zufuliu/notepad2/releases/download/v$version/Notepad2_i18n_Win32_v$version.zip"
+            }
+        }
+    }
+}
