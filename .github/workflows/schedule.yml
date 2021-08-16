@@ -5,11 +5,11 @@ name: Excavator
 jobs:
   excavate:
     name: Excavator
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
     - uses: actions/checkout@main
     - name: Excavate
-      uses: Ash258/Scoop-GithubActions@stable
+      uses: Ash258/Scoop-GithubActions@stable-win
       env:
         GITH_EMAIL: yurical1@outlook.com
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
