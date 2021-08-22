@@ -1,0 +1,33 @@
+{
+    "version": "1.1.7.434",
+    "description": "Advanced Windows volume control.",
+    "homepage": "https://irzyxa.blogspot.com",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://github.com/irzyxa/Volume2/blob/master/License.txt"
+    },
+    "url": "https://volumesqr.at.ua/Beta/Volume2_1_1_7.zip",
+    "hash": "f5dc5818242a8326302344424142fd5e3df131498424f243c37e6d4c47933bf8",
+    "extract_dir": "Volume2",
+    "shortcuts": [
+        [
+            "Volume2.exe",
+            "Volume²"
+        ]
+    ],
+    "persist": [
+        "Meter Skins",
+        "Osd Skins",
+        "Skins",
+        "Config.ini"
+    ],
+    "checkver": {
+        "url": "https://irzyxa.blogspot.com/p/downloads.html",
+        "regex": "Last Beta version.*Volume&#178; v(?<version>[\\d.]+), build (?<buildVersion>[\\d.]+)",
+        "replace": "${version}.${buildVersion}"
+    },
+    "autoupdate": {
+        "url": "https://volumesqr.at.ua/Beta/Volume2_$majorVersion_$minorVersion_$patchVersion.zip",
+        "extract_dir": "Volume2"
+    }
+}
