@@ -1,13 +1,13 @@
 {
-    "version": "8.12.7",
+    "version": "8.12.8",
     "description": "HDD/SSD utility software which supports S.M.A.R.T and a part of USB-HDD",
     "homepage": "https://osdn.net/projects/crystaldiskinfo/",
     "license": {
         "identifier": "MIT",
         "url": "https://crystalmark.info/en/software/crystaldiskinfo/crystaldiskinfo-license/"
     },
-    "url": "https://jaist.dl.osdn.jp/crystaldiskinfo/75914/CrystalDiskInfo8_12_7Shizuku.zip",
-    "hash": "343e0acc6a6b4ab55f96e83b303e68ded993506aae45d3fce1d7a095e8707bd5",
+    "url": "https://jaist.dl.osdn.jp/crystaldiskinfo/76087/CrystalDiskInfo8_12_8Shizuku.zip",
+    "hash": "ac660c547e64e78dbee5540f5b0bec909e07774613a2082dd8a1401034177aa9",
     "architecture": {
         "64bit": {
             "bin": [
