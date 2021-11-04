@@ -27,6 +27,22 @@ function ConvertTo-Hex {
     return [System.BitConverter]::ToString($Content).replace('-','').ToUpper()
 }
 
+$exe = Get-Item "$Path\PotPlayerMini64.exe"
+$exehex = ConvertTo-Hex -Path $exe
+$exever = $exe.VersionInfo.FileVersion.replace(',', '.').replace(' ','')
+Write-Host ("{0} version: {1}" -f $exe.Name, $exever)
+Write-Host "Replacing hexes..."
+$hex = "C00F844202000048"
+$replace = "C090909090909048"
+if ($exehex -Match $hex) {
+	Write-Host ("Found: {0}" -f $hex)
+	$exehex = ($exehex -replace $hex, $replace)
+} else {
+	Write-Warning ("Not Found: {0}" -f $hex)
+	Exit -1
+}
+Convert-HexToFile -Hex $exehex -Destination $exe
+
 $DllReplaceList = @(
 	"000070006C00610079002E006B0061006B0061006F002E0063006F006D0000"
 	"00766164732D6170692E6461756D6B616B616F2E636F6D00"
@@ -66,18 +82,3 @@ ForEach ($hex in $DllReplaceList) {
 	}
 }
 Convert-HexToFile -Hex $dllhex -Destination $dll
-
-$exe = Get-Item "$Path\PotPlayerMini64.exe"
-$exehex = ConvertTo-Hex -Path $exe
-$exever = $exe.VersionInfo.FileVersion.replace(',', '.').replace(' ','')
-Write-Host ("{0} version: {1}" -f $exe.Name, $exever)
-Write-Host "Replacing hexes..."
-$hex = "C00F844202000048"
-$replace = "C090909090909048"
-if ($exehex -Match $hex) {
-	Write-Host ("Found: {0}" -f $hex)
-	$exehex = ($exehex -replace $hex, $replace)
-} else {
-	Write-Warning ("Not Found: {0}" -f $hex)
-}
-Convert-HexToFile -Hex $exehex -Destination $exe
