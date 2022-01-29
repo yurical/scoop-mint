@@ -1,5 +1,5 @@
 {
-    "version": "1.1.8.455",
+    "version": "1.1.8.456",
     "description": "Advanced Windows volume control.",
     "homepage": "https://irzyxa.blogspot.com",
     "license": {
@@ -7,7 +7,7 @@
         "url": "https://github.com/irzyxa/Volume2/blob/master/License.txt"
     },
     "url": "https://volumesqr.at.ua/Beta/Volume2_1_1_8.zip",
-    "hash": "34cb3c5bf4f0db890a5d1d8537f55df1ef91bc59adbbc989423ee5cfdf3d8274",
+    "hash": "bd54726e89f4eb2af66adcfd5ddde240b77978de8ab0e1129c5c629cbd620761",
     "extract_dir": "Volume2",
     "shortcuts": [
         [
