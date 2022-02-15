@@ -1,5 +1,5 @@
 {
-    "version": "22.01.19",
+    "version": "22.02.14",
     "description": "Highly customizable media player",
     "homepage": "https://potplayer.daum.net",
     "notes": "Beta version of this program only provides 64-bit version.",
@@ -14,7 +14,7 @@
                 "https://raw.githubusercontent.com/yurical/scoop-mint/master/scripts/remove-potplayermini-beta-ads.ps1"
             ],
             "hash": [
-                "348717b5a58409d81b7d20b64107d87bb7350da7738fd6677972e68299cc0a4f",
+                "a4e2d192bbb7e54c522c8a637e104e323fdccd85f00c0dee7e25ca3caf7a4886",
                 "1383e7bd9ea3e6f51d7c412bc7f01f8ff6a601144bdeb0e51eff7e382b2dccb2"
             ],
             "shortcuts": [
