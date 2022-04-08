@@ -1,13 +1,13 @@
 {
-    "version": "0.16.0",
+    "version": "0.16.1",
     "description": "hactoolnet is an example program that uses LibHac. It is used in a similar manner to hactool.",
     "homepage": "https://github.com/Thealexbarney/LibHac",
     "license": {
         "identifier": "MIT",
         "url": "https://raw.githubusercontent.com/Thealexbarney/LibHac/master/LICENSE"
     },
-    "url": "https://github.com/Thealexbarney/LibHac/releases/download/v0.16.0/hactoolnet-0.16.0-win.zip",
-    "hash": "e036430ce362a51e95c4dfb10ce5329d8f59e5276e78f8c567dbd85ccaa6bd30",
+    "url": "https://github.com/Thealexbarney/LibHac/releases/download/v0.16.1/hactoolnet-0.16.1-win.zip",
+    "hash": "4e6844323a28900d48d77c4dfad56d78ba0fb51784e636feacceffc6f9df4afd",
     "bin": "hactoolnet.exe",
     "checkver": "github",
     "autoupdate": {
