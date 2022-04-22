@@ -1,5 +1,5 @@
 {
-    "version": "20220328-c2d1597",
+    "version": "20220421-6e45acd",
     "description": "A complete, cross-platform solution to record, convert and stream audio and video. (Autobuilds)",
     "homepage": "https://ffmpeg.org",
     "license": {
@@ -8,12 +8,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AnimMouse/ffmpeg-autobuild/releases/download/m-2022-03-28-07-12/ffmpeg-c2d1597-651202b-win64-nonfree.7z",
-            "hash": "242df25c0759733d813638e86e833fd6145d1e976198714bd0ef9fca1189df3e"
+            "url": "https://github.com/AnimMouse/ffmpeg-autobuild/releases/download/m-2022-04-21-06-00/ffmpeg-6e45acd-00a73a1-win64-nonfree.7z",
+            "hash": "b9d2f8ef570a860bd90f95839420835a777bdf4429b9141fee3c1bb2c3c69d68"
         },
         "32bit": {
-            "url": "https://github.com/AnimMouse/ffmpeg-autobuild/releases/download/m-2022-03-28-07-12/ffmpeg-c2d1597-651202b-win32-nonfree.7z",
-            "hash": "1c399c40f83614861a87b2c2c46c05e2f56cf873fa1d277d0827361cd9749a18"
+            "url": "https://github.com/AnimMouse/ffmpeg-autobuild/releases/download/m-2022-04-21-06-00/ffmpeg-6e45acd-00a73a1-win32-nonfree.7z",
+            "hash": "cd2029c8c705b37a9b0a8581929ae9c3f4b65b33fbc0af928a66df070c4cd226"
         }
     },
     "bin": [
