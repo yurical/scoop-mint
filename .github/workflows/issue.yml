@@ -14,4 +14,3 @@ jobs:
         env:
           GITH_EMAIL: yurical1@outlook.com
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SHOVEL: '1'
