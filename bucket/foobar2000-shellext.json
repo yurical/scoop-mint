@@ -37,17 +37,23 @@
         ]
     },
     "post_install": [
-        "if (!(Test-Path \"$persist_dir\\profile\\*\")) {",
-        "    Get-ChildItem -Path \"$persist_dir\" -Exclude \"profile\" | Move-Item -Destination \"$persist_dir\\profile\" -Force",
+        "info '[Portable Mode]: Copying user data...'",
+        "if (Test-Path \"$env:AppData\\foobar2000-v2\") {",
+        "    if (Test-Path \"$env:AppData\\foobar2000\") {",
+        "        Rename-Item \"$env:AppData\\foobar2000\" \"$env:AppData\\foobar2000.bak\" -Force",
+        "    }",
+        "    New-Item -ItemType Container -Path \"$persist_dir\\profile\" -Force",
+        "    Copy-Item \"$env:AppData\\foobar2000-v2\\*\" -Destination \"$persist_dir\\profile\" -Force",
+        "    Rename-Item \"$env:AppData\\foobar2000-v2\" \"$env:AppData\\foobar2000-v2.bak\" -Force",
+        "    info \"[Portable Mode]: Your foobar2000 user data that was previously located in\"",
+        "    info \"[Portable Mode]: '$env:AppData\foobar2000' has been migrated to the persist directory.\"",
+        "    info \"[Portable Mode]: In '$env:AppData', there is the backup folder (foobar2000.bak) for your user data'\"",
+        "    info \"[Portable Mode]: and the symlink of persist folder. You may delete the backup folder if it is not needed.\"",
         "}",
-        "if (!(Test-Path \"$persist_dir\\profile\\*\") -and (Test-Path \"$env:AppData\\foobar2000\")) {",
-        "    info '[Portable Mode]: Copying user data...'",
-        "    Copy-Item \"$env:AppData\\foobar2000\\*\" -Destination \"$persist_dir\\profile\" -Force -Recurse",
-        "}",
-        "if (!(Test-Path \"$persist_dir\\profile\\playlists-v1.4\")) {",
-        "    Get-ChildItem -Path \"$persist_dir\\profile\" -Filter \"playlists\" -Directory | Rename-Item -NewName \"playlists-v1.4\" -Force",
-        "}",
-        "Get-ChildItem -Path \"$persist_dir\\profile\" -Filter \"playlists\" | Remove-Item -Force -Recurse"
+        "New-Item -ItemType Junction -Path \"$env:AppData\\foobar2000-v2\" -Target \"$persist_dir\\profile\" -Force",
+        "if (!(Test-Path \"$persist_dir\\profile\\playlists-v2.0\")) {",
+        "    Get-ChildItem -Path \"$persist_dir\\profile\" -Filter \"playlists\" -Directory | Rename-Item -NewName \"playlists-v2.0\" -Force",
+        "}"
     ],
     "bin": "foobar2000.exe",
     "shortcuts": [
@@ -55,6 +61,11 @@
             "foobar2000.exe",
             "Foobar2000"
         ]
+    ],
+    "post_uninstall": [
+        "if ($cmd -eq 'uninstall') {",
+        "    Remove-Item \"$env:AppData\\foobar2000-v2\" -Force -ErrorAction SilentlyContinue",
+        "}"
     ],
     "persist": "profile",
     "checkver": {
