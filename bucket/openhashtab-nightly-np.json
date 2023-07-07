@@ -7,7 +7,11 @@
     "hash": "fd6712a3ad517b4041fbf648bd214d22c957e9d23f6ed81e6f51f084d6b3eb49",
     "post_install": [
         "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
-        "Start-Process \"$dir\\OpenHashTab_setup.exe\" -Wait -Verb 'RunAs' -Args @('/VERYSILENT', \"/DIR=$dir\", '/ALLUSERS', '/SUPPRESSMSGBOXES')",
+        "if ($global) {",
+        "  Start-Process \"$dir\\OpenHashTab_setup.exe\" -Wait -Verb 'RunAs' -Args @('/VERYSILENT', \"/DIR=$dir\", '/ALLUSERS', '/SUPPRESSMSGBOXES')",
+        "} else {",
+        "  Start-Process \"$dir\\OpenHashTab_setup.exe\" -Wait -Verb 'RunAs' -Args @('/VERYSILENT', \"/DIR=$dir\", '/CURRENTUSER', '/SUPPRESSMSGBOXES')",
+        "}",
         "Remove-Item \"$dir\\OpenHashTab_setup.exe\""
     ],
     "pre_uninstall": [
