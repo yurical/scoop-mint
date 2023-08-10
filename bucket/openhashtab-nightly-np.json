@@ -1,10 +1,10 @@
 {
-    "version": "c1029d1",
+    "version": "afb8489",
     "homepage": "https://github.com/namazso/OpenHashTab",
     "description": "A shell extension for conveniently calculating and checking file hashes from file properties. As well as the context menu.",
     "license": "GPL-3.0",
     "url": "https://nightly.link/namazso/OpenHashTab/workflows/ci/master/setup.zip",
-    "hash": "67a38c862968746861594af93e9d0454bd6939ed87f6d689a39c8bccb88b6c9b",
+    "hash": "baa64861add98c2218f8e1c67251a84f60173f1f748267341714d4f5edba399f",
     "post_install": [
         "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
         "if ($global) {",
