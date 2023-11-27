@@ -1,19 +1,21 @@
 {
-    "version": "9.1.1",
-    "description": "HDD/SSD utility software which supports S.M.A.R.T and a part of USB-HDD",
-    "homepage": "https://osdn.net/projects/crystaldiskinfo/",
-    "license": {
-        "identifier": "MIT",
-        "url": "https://crystalmark.info/en/software/crystaldiskinfo/crystaldiskinfo-license/"
-    },
-    "url": "https://jaist.dl.osdn.jp/crystaldiskinfo/78992/CrystalDiskInfo9_1_1Shizuku.zip",
-    "hash": "bad7342f2f232eeed80631ac39cc6ad3e6a7f3b5d0aa87427cd324ba90beb4dd",
+    "version": "9.2.1",
+    "description": "A HDD/SSD utility software which supports a part of USB, RAID and NVMe.",
+    "homepage": "https://sourceforge.net/projects/crystaldiskinfo/",
+    "license": "MIT",
+    "url": "https://sourceforge.net/projects/crystaldiskinfo/files/9.2.1/CrystalDiskInfo9_2_1Shizuku.zip",
+    "hash": "sha1:ffcd1b21f7d326a65acdf251801f493fab7f6a90",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\DiskInfo.ini\")) { New-Item \"$dir\\DiskInfo.ini\" | Out-Null }",
+        "# Manually persist AMD RAID plugins (AMD_RC2t7x64.dll, AMD_RC2t7x86.dll)",
+        "if (Test-Path \"$persist_dir\\AMD_RC2t7*.dll\") { Copy-Item \"$persist_dir\\AMD_RC2t7*.dll\" \"$dir\\\" }"
+    ],
     "architecture": {
         "64bit": {
             "bin": [
                 [
                     "DiskInfo64S.exe",
-                    "DiskInfo"
+                    "DiskInfo Shizuku Edition"
                 ]
             ],
             "shortcuts": [
@@ -27,7 +29,7 @@
             "bin": [
                 [
                     "DiskInfo32S.exe",
-                    "DiskInfo"
+                    "DiskInfo Shizuku Edition"
                 ]
             ],
             "shortcuts": [
@@ -38,21 +40,16 @@
             ]
         }
     },
-    "pre_install": [
-        "if (-not (Test-Path \"$persist_dir\\DiskInfo.ini\")) {",
-        "    New-Item \"$dir\\DiskInfo.ini\" -ItemType \"file\" | Out-Null",
-        "}"
-    ],
     "persist": [
         "Smart",
         "DiskInfo.ini"
     ],
-    "checkver": "<a href=\"/projects/crystaldiskinfo/releases/(?<release>[\\d]*)\">CrystalDiskInfo ([\\d.]+)</a>",
+    "pre_uninstall": "if (Test-Path \"$dir\\AMD_RC2t7*.dll\") { Copy-Item \"$dir\\AMD_RC2t7*.dll\" \"$persist_dir\\\" }",
+    "checkver": {
+        "sourceforge": "crystaldiskinfo",
+        "regex": "([\\d.]+)/CrystalDiskInfo([\\d_]+).zip"
+    },
     "autoupdate": {
-        "url": "https://jaist.dl.osdn.jp/crystaldiskinfo/$matchRelease/CrystalDiskInfo$underscoreVersionShizuku.zip",
-        "hash": {
-            "url": "https://osdn.net/projects/crystaldiskinfo/downloads/$matchRelease/CrystalDiskInfo$underscoreVersionShizuku.zip/",
-            "regex": "<dd>$sha256</dd>"
-        }
+        "url": "https://sourceforge.net/projects/crystaldiskinfo/files/$version/CrystalDiskInfo$underscoreVersionShizuku.zip"
     }
 }
