@@ -1,5 +1,5 @@
 {
-    "version": "4.24.03r5146",
+    "version": "4.24.05r5242",
     "description": "A modified version (fork) of Notepad2-mod.",
     "homepage": "https://github.com/zufuliu/notepad2",
     "license": {
@@ -8,12 +8,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/zufuliu/notepad2/releases/download/v4.24.03r5146/Notepad2_i18n_x64_v4.24.03r5146.zip",
-            "hash": "fcdf8a1139fbada6fb6b0f3721753b7cadcd42a136d1b004cfdf0497264b8e15"
+            "url": "https://github.com/zufuliu/notepad2/releases/download/v4.24.05r5242/Notepad2_i18n_x64_v4.24.05r5242.zip",
+            "hash": "de973b6c173fbc4ae922f2c4ec265473a88b18e1ea2cd980c52527167f0c151c"
         },
         "32bit": {
-            "url": "https://github.com/zufuliu/notepad2/releases/download/v4.24.03r5146/Notepad2_i18n_Win32_v4.24.03r5146.zip",
-            "hash": "2a10b7ba4c584dea0b10e949752dd769a25b230213b9128d91b6e1018f49561b"
+            "url": "https://github.com/zufuliu/notepad2/releases/download/v4.24.05r5242/Notepad2_i18n_Win32_v4.24.05r5242.zip",
+            "hash": "748bec75952c9257fd42a1cd54620a1bda2503260cc9df80b956918a0d6adf0c"
         }
     },
     "bin": [
