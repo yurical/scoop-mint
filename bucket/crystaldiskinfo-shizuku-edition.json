@@ -1,21 +1,14 @@
 {
-    "version": "9.2.3",
+    "version": "9.5.0",
     "description": "A HDD/SSD utility software which supports a part of USB, RAID and NVMe.",
     "homepage": "https://sourceforge.net/projects/crystaldiskinfo/",
     "license": "MIT",
-    "url": "https://sourceforge.net/projects/crystaldiskinfo/files/9.2.3/CrystalDiskInfo9_2_3Shizuku.zip",
-    "hash": "sha1:9ccc704e93e9ebed352153486fac8669a1c31271",
-    "pre_install": [
-        "if (!(Test-Path \"$persist_dir\\DiskInfo.ini\")) { New-Item \"$dir\\DiskInfo.ini\" | Out-Null }",
-        "# Manually persist AMD RAID plugins (AMD_RC2t7x64.dll, AMD_RC2t7x86.dll)",
-        "if (Test-Path \"$persist_dir\\AMD_RC2t7*.dll\") { Copy-Item \"$persist_dir\\AMD_RC2t7*.dll\" \"$dir\\\" }"
-    ],
     "architecture": {
         "64bit": {
             "bin": [
                 [
                     "DiskInfo64S.exe",
-                    "DiskInfo Shizuku Edition"
+                    "DiskInfoS"
                 ]
             ],
             "shortcuts": [
@@ -29,7 +22,7 @@
             "bin": [
                 [
                     "DiskInfo32S.exe",
-                    "DiskInfo Shizuku Edition"
+                    "DiskInfoS"
                 ]
             ],
             "shortcuts": [
@@ -38,8 +31,29 @@
                     "CrystalDiskInfo Shizuku Edition"
                 ]
             ]
+        },
+        "arm64": {
+            "bin": [
+                [
+                    "DiskInfoA64S.exe",
+                    "DiskInfoS"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "DiskInfoA64S.exe",
+                    "CrystalDiskInfo Shizuku Edition"
+                ]
+            ]
         }
     },
+    "url": "https://sourceforge.net/projects/crystaldiskinfo/files/9.5.0/CrystalDiskInfo9_5_0Shizuku.zip",
+    "hash": "sha1:4d732154346ecd3708b8156bf9ebd700bd41f440",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\DiskInfo.ini\")) { New-Item \"$dir\\DiskInfo.ini\" | Out-Null }",
+        "# Manually persist AMD RAID plugins (AMD_RC2t7x64.dll, AMD_RC2t7x86.dll)",
+        "if (Test-Path \"$persist_dir\\AMD_RC2t7*.dll\") { Copy-Item \"$persist_dir\\AMD_RC2t7*.dll\" \"$dir\\\" }"
+    ],
     "persist": [
         "Smart",
         "DiskInfo.ini"
@@ -47,7 +61,7 @@
     "pre_uninstall": "if (Test-Path \"$dir\\AMD_RC2t7*.dll\") { Copy-Item \"$dir\\AMD_RC2t7*.dll\" \"$persist_dir\\\" }",
     "checkver": {
         "sourceforge": "crystaldiskinfo",
-        "regex": "([\\d.a-zA-Z]+)/CrystalDiskInfo.*.zip"
+        "regex": "((\\d+\\.)(\\d+\\.)(\\d+))/CrystalDiskInfo.*.zip"
     },
     "autoupdate": {
         "url": "https://sourceforge.net/projects/crystaldiskinfo/files/$version/CrystalDiskInfo$underscoreVersionShizuku.zip"
