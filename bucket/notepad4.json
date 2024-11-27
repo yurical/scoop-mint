@@ -21,7 +21,7 @@
         }
     },
     "bin": [
-        "metapath.exe",
+        "matepath.exe",
         "Notepad4.exe"
     ],
     "shortcuts": [
@@ -30,12 +30,12 @@
             "Notepad4"
         ],
         [
-            "metapath.exe",
-            "metapath"
+            "matepath.exe",
+            "matepath"
         ]
     ],
     "persist": [
-        "metapath.ini",
+        "matepath.ini",
         "Notepad4 DarkTheme.ini",
         "Notepad4.ini"
     ],
