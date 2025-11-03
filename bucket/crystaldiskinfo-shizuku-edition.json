@@ -1,5 +1,5 @@
 {
-    "version": "9.6.3",
+    "version": "9.7.2",
     "description": "A HDD/SSD utility software which supports a part of USB, RAID and NVMe.",
     "homepage": "https://sourceforge.net/projects/crystaldiskinfo/",
     "license": "MIT",
@@ -47,8 +47,8 @@
             ]
         }
     },
-    "url": "https://sourceforge.net/projects/crystaldiskinfo/files/9.6.3/CrystalDiskInfo9_6_3Shizuku.zip",
-    "hash": "sha1:826b0175f63d7bf6c611d69b54c8874ac236951d",
+    "url": "https://sourceforge.net/projects/crystaldiskinfo/files/9.7.2/CrystalDiskInfo9_7_2Shizuku.zip",
+    "hash": "sha1:a14c3ff23dfa0d456dddd9d9ba3546a8b445aab6",
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\DiskInfo.ini\")) { New-Item \"$dir\\DiskInfo.ini\" | Out-Null }",
         "# Manually persist AMD RAID plugins (AMD_RC2t7x64.dll, AMD_RC2t7x86.dll)",
