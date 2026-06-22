@@ -1,5 +1,5 @@
 {
-    "version": "26.05r6166",
+    "version": "26.06r6196",
     "description": "A light-weight Scintilla based text editor for Windows with syntax highlighting, code folding, auto-completion and API list for many programming languages and documents.",
     "homepage": "https://github.com/zufuliu/notepad4",
     "license": {
@@ -8,16 +8,16 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/zufuliu/notepad4/releases/download/v26.05r6166/Notepad4_i18n_x64_v26.05r6166.zip",
-            "hash": "fe7f10b77f70ba31012bc9d7cc7511ab9b3e6458419e3ee880eb1f58e358deba"
+            "url": "https://github.com/zufuliu/notepad4/releases/download/v26.06r6196/Notepad4_i18n_x64_v26.06r6196.zip",
+            "hash": "047a19b1fc10858bf932a1dc1e1ce920835014e71a2f2c30384c5b4ad441e6d6"
         },
         "32bit": {
-            "url": "https://github.com/zufuliu/notepad4/releases/download/v26.05r6166/Notepad4_i18n_Win32_v26.05r6166.zip",
-            "hash": "a51076751710801f1cd0c0ed8b5ff2680c61cb939779acc5084ec71a958f3770"
+            "url": "https://github.com/zufuliu/notepad4/releases/download/v26.06r6196/Notepad4_i18n_Win32_v26.06r6196.zip",
+            "hash": "90ff7b00bf4d6863e6a9282778c863714d0024986138984fc82a6d624de3deda"
         },
         "arm64": {
-            "url": "https://github.com/zufuliu/notepad4/releases/download/v26.05r6166/Notepad4_i18n_ARM64_v26.05r6166.zip",
-            "hash": "1146844fa81d608c80556d09728de219b957d347e76a5215bc7ac8fd5879f18b"
+            "url": "https://github.com/zufuliu/notepad4/releases/download/v26.06r6196/Notepad4_i18n_ARM64_v26.06r6196.zip",
+            "hash": "5f05b420d20bade533bfaeb7b12fcd063dff511acf3b1bbd6e3e9baf422fe49d"
         }
     },
     "bin": [
