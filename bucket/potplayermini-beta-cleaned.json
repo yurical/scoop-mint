@@ -1,5 +1,5 @@
 {
-    "version": "26.06.18",
+    "version": "26.07.03",
     "description": "Highly customizable media player",
     "homepage": "https://potplayer.daum.net",
     "license": {
@@ -13,7 +13,7 @@
                 "https://raw.githubusercontent.com/yurical/scoop-mint/master/scripts/remove-potplayermini-beta-ads.ps1"
             ],
             "hash": [
-                "658ba44af94da3e38cb1b80903f3b5a0982b1b87d2c596473f22e00f6fa6d361",
+                "03f8557e14867009ce379183ebe3811d8857171e73a43b3c17dd65e224038326",
                 "4a4ea012a047dd82f4d56c6b58f05c5c04f3b887d1244cbcdb353c7ff3a5ba20"
             ],
             "shortcuts": [
